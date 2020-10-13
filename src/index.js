@@ -1,19 +1,21 @@
 import * as serviceWorker from './serviceWorker';
-import store from "./redux/redux-store";
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
+import React, {StrictMode} from 'react';
+import {render} from 'react-dom';
 import App from './App';
+import store from "./redux/redux-store";
 import {BrowserRouter} from "react-router-dom";
 import {Provider} from "react-redux";
+import './index.css';
 
 
 let rerenderEntireTree = (state) => {
 
-    ReactDOM.render(
+    render(
         <BrowserRouter>
             <Provider store={store}>
-                <App/>
+                <StrictMode>
+                    <App/>
+                </StrictMode>
             </Provider>
         </BrowserRouter>, document.getElementById('root'));
 

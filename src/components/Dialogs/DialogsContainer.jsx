@@ -20,11 +20,11 @@ let mapDispatchToProps = (dispatch) => {
         },
         addMessage: () => {
             dispatch(addMessageCreator());
-            },
+        },
     }
 };
 
 
-const superDialogsContainer = connect(mapStateToProps,mapDispatchToProps)(Dialogs);
+const superDialogsContainer = connect(mapStateToProps, mapDispatchToProps)(Dialogs);
 
 export default superDialogsContainer;
