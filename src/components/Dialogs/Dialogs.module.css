@@ -32,6 +32,15 @@
     color: coral;
 }
 
+.form {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.formInput:focus {
+    outline-width: 0;
+}
+
 .messages {
 
 }

@@ -9,15 +9,16 @@ const Dialogs = (props) => {
     let state = props.dialogsPage;
 
     let dialogsElements = state.dialogs.map(dialog => <DialogItem
-        name={dialog.name} id={dialog.id} img={dialog.img}/>);
+        name={dialog.name} key={dialog.id} id={dialog.id} img={dialog.img}/>);
 
     let messagesElements = state.messages.map(message => <Message
-        message={message.message}/>);
+        message={message.message} key={message.id} id={message.id}/>);
 
     let newMessageText = state.newMessageText;
 
 
-    let onAddMessage = () => {
+    let onAddMessage = (event) => {
+        event.preventDefault();
         props.addMessage();
 
     };
@@ -38,14 +39,12 @@ const Dialogs = (props) => {
             <div className={classes.messages}>
                 {messagesElements}
                 <div className={classes.newMessage}>
-                    <div>
-                        <textarea onChange={onMessageChange}
+                    <form className={classes.form}>
+                        <input className={classes.formInput} type='text' onChange={onMessageChange}
                                   value={newMessageText}
                                   placeholder='Enter your message'/>
-                    </div>
-                    <div>
-                        <button onClick={onAddMessage}>Send Message</button>
-                    </div>
+                        <button type="submit" onClick={onAddMessage}>Send Message</button>
+                    </form>
                 </div>
             </div>
 
