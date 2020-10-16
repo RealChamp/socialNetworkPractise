@@ -9,6 +9,7 @@ const Nav = () => {
             <ul>
                 <li className={classes.item}><NavLink activeClassName={classes.active} to="/profile">Profile</NavLink></li>
                 <li className={classes.item}><NavLink activeClassName={classes.active} to="/dialogs">Messages</NavLink></li>
+                <li className={classes.item}><NavLink activeClassName={classes.active} to="/users">Users</NavLink></li>
                 <li className={classes.item}><NavLink activeClassName={classes.active} to="/news">News</NavLink></li>
                 <li className={classes.item}><NavLink activeClassName={classes.active} to="/music">Music</NavLink></li>
                 <li className={classes.item}><NavLink activeClassName={classes.active} to="/settings">Settings</NavLink></li>
