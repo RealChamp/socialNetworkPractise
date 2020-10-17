@@ -41,6 +41,7 @@ const usersReducer = (state = initialState, action) => {
     }
 }
 
+// TODO Refactor(move it to different file and import from it)
 export const followAC = (userId) => ({type: FOLLOW, userId})
 export const unFollowAC = (userId) => ({type: UNFOLLOW, userId})
 export const setUsersAC = (users) => ({type: SET_USERS, users})
