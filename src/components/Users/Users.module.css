@@ -30,6 +30,7 @@
     padding: 5px;
     margin-bottom: 8px;
     margin-top: -20px;
+    cursor: pointer;
 }
 
 .userFollow:focus {
@@ -38,7 +39,7 @@
 
 .userItemContainer {
     width: 650px;
-    margin-left: auto;
+    margin-left: 25px;
     margin-right: auto;
     margin-bottom: 20px;
 }
